@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Quicksand:wght@600;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  color: #4a4458;
+  background-color: #f5f0f0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  color: #4a4458;
+}
+
+h1 { font-size: 32px; font-weight: 700; line-height: 40px; }
+h2 { font-size: 24px; font-weight: 700; line-height: 32px; }
+h3 { font-size: 20px; font-weight: 600; line-height: 28px; }
+h4 { font-size: 18px; font-weight: 600; line-height: 24px; }
+h5 { font-size: 16px; font-weight: 600; line-height: 22px; }
+h6 { font-size: 14px; font-weight: 600; line-height: 20px; }
+
+p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #4a4458;
+  margin: 0;
+}
+
+.ds-caption {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #8b7e95;
+}
+
+.ds-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  color: #5b4e6b;
+}

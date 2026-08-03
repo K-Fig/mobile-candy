@@ -1,0 +1,58 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 320px;
+}
+
+.label {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  color: #5b4e6b;
+}
+
+.field {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid var(--input-border, #d4c5f9);
+  border-radius: 16px;
+  padding: 14px 20px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #8b7e95;
+  width: 100%;
+  height: 56px;
+  box-shadow: var(--input-shadow, none);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  resize: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.field::placeholder {
+  color: #8b7e95;
+}
+
+.field.filled,
+.field.focused {
+  color: #4a4458;
+}
+
+.field.focused {
+  border-color: #8b4789;
+  box-shadow: 0px 0px 8px 2px rgba(212, 197, 249, 0.4);
+}
+
+.field.textarea {
+  height: 128px;
+  line-height: 24px;
+  resize: vertical;
+}
+
+.field.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

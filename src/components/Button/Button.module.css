@@ -1,0 +1,57 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: var(--btn-padding);
+  font-family: 'DM Sans', sans-serif;
+  font-size: var(--btn-font-size);
+  font-weight: 500;
+  line-height: var(--btn-line-height);
+  color: var(--btn-color);
+  background-color: var(--btn-bg);
+  border: none;
+  border-radius: var(--btn-radius);
+  cursor: pointer;
+  transition: background-color 0.15s ease, opacity 0.15s ease;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.root:hover:not(:disabled) {
+  background-color: var(--btn-hover-bg);
+}
+
+.root:focus-visible {
+  outline: 2px solid #8b4789;
+  outline-offset: 2px;
+}
+
+.root:active:not(:disabled) {
+  opacity: 0.85;
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Size variants — sizing is injected via CSS variables from token map */
+.sizeSmall  { border-radius: 9999px; }
+.sizeMedium { border-radius: 24px; }
+.sizeLarge  { border-radius: 16px; }
+
+/* Icon placeholder */
+.icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-color: currentColor;
+  border-radius: 50%;
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+.label {
+  display: inline-block;
+}
