@@ -95,19 +95,34 @@ export default function App() {
           zIndex: 10,
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'baseline', gap: '12px' }}>
-          <h1
+        <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: '12px' }}>
+          <div style={{ display: 'flex', alignItems: 'baseline', gap: '12px' }}>
+            <h1
+              style={{
+                fontFamily: theme.typography.fontFamily.display,
+                fontSize: '24px',
+                fontWeight: 700,
+                color: colors.textLabel,
+                margin: 0,
+              }}
+            >
+              ✨ Mobile Candy
+            </h1>
+            <span style={{ fontSize: '14px', color: colors.textMuted }}>Design System Showcase</span>
+          </div>
+          <a
+            href="#/users"
             style={{
-              fontFamily: theme.typography.fontFamily.display,
-              fontSize: '24px',
-              fontWeight: 700,
-              color: colors.textLabel,
-              margin: 0,
+              fontFamily: theme.typography.fontFamily.sans,
+              fontSize: '14px',
+              fontWeight: 600,
+              color: colors.accent,
+              textDecoration: 'none',
+              whiteSpace: 'nowrap',
             }}
           >
-            ✨ Mobile Candy
-          </h1>
-          <span style={{ fontSize: '14px', color: colors.textMuted }}>Design System Showcase</span>
+            User Directory example →
+          </a>
         </div>
       </header>
 
