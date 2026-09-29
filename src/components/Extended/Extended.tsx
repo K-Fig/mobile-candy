@@ -94,14 +94,21 @@ export interface ListItemProps {
   title?: string
   subtitle?: string
   showIcon?: boolean
+  iconType?: 'Text' | 'Image'
+  imageSrc?: string
   onClick?: () => void
   className?: string
 }
 
-export function ListItem({ title = 'List Item Title', subtitle = 'Supporting text', showIcon = true, onClick, className }: ListItemProps) {
+export function ListItem({ title = 'List Item Title', subtitle = 'Supporting text', showIcon = true, iconType = 'Text', imageSrc, onClick, className }: ListItemProps) {
+  const icon = showIcon && (
+    iconType === 'Image'
+      ? <img src={imageSrc} alt="" className={styles.listItemImage} />
+      : <span className={styles.listItemIcon} aria-hidden="true">✦</span>
+  )
   const content = (
     <>
-      {showIcon && <span className={styles.listItemIcon} aria-hidden="true">*</span>}
+      {icon}
       <span className={styles.listItemCopy}><strong>{title}</strong><span>{subtitle}</span></span>
       <span className={styles.listItemArrow} aria-hidden="true">&gt;</span>
     </>

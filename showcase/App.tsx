@@ -110,19 +110,34 @@ export default function App() {
             </h1>
             <span style={{ fontSize: '14px', color: colors.textMuted }}>Design System Showcase</span>
           </div>
-          <a
-            href="#/users"
-            style={{
-              fontFamily: theme.typography.fontFamily.sans,
-              fontSize: '14px',
-              fontWeight: 600,
-              color: colors.accent,
-              textDecoration: 'none',
-              whiteSpace: 'nowrap',
-            }}
-          >
-            User Directory example →
-          </a>
+          <div style={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
+            <a
+              href="#/users"
+              style={{
+                fontFamily: theme.typography.fontFamily.sans,
+                fontSize: '14px',
+                fontWeight: 600,
+                color: colors.accent,
+                textDecoration: 'none',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              User Directory →
+            </a>
+            <a
+              href="#/product-detail"
+              style={{
+                fontFamily: theme.typography.fontFamily.sans,
+                fontSize: '14px',
+                fontWeight: 600,
+                color: colors.accent,
+                textDecoration: 'none',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              Product Detail →
+            </a>
+          </div>
         </div>
       </header>
 
