@@ -1,6 +1,6 @@
 {
   "name": "@figmaposaurus/mobile-candy-ds",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "description": "Mobile Candy — a dreamy pastel design system for mobile-first interfaces",
   "license": "UNLICENSED",
   "private": false,
@@ -8,13 +8,15 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "style": "dist/style.css",
+  "sideEffects": [
+    "**/*.css"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     },
-    "./style.css": "./dist/style.css",
-    "./dist/style.css": "./dist/style.css"
+    "./style.css": "./dist/style.css"
   },
   "files": [
     "dist",
@@ -37,10 +39,11 @@
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "@vitejs/plugin-react": "^4.0.0",
-    "react": "^18.3.0",
-    "react-dom": "^18.3.0",
     "prettier": "^3.0.0",
     "typescript": "^5.0.0",
     "vite": "^5.0.0"
+  },
+  "dependencies": {
+    "@figma/code-connect": "^2.0.1"
   }
 }
