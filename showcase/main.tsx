@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import UsersPage from './UsersPage'
+import ProductDetailPage from './ProductDetailPage'
 
 function Root() {
   const [hash, setHash] = useState(window.location.hash)
@@ -13,7 +14,9 @@ function Root() {
   }, [])
 
   const route = hash.replace(/^#\/?/, '')
-  return route === 'users' ? <UsersPage /> : <App />
+  if (route === 'users') return <UsersPage />
+  if (route === 'product-detail') return <ProductDetailPage />
+  return <App />
 }
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
